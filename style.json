@@ -29,11 +29,11 @@
             "tileSize": 256
         },
         "composite": {
-            "url": "mapbox://mapbox.mapbox-streets-v8,mapbox.mapbox-terrain-v2,behnam2019.ckqcmbhml1h5321t86aqtp13b-005ei,behnam2019.ckqcmbhml1h5321t86aqtp13b-1iklx",
+            "url": "mapbox://mapbox.mapbox-streets-v8,mapbox.mapbox-terrain-v2",
             "type": "vector"
         },
         "composite2": {
-            "url": "mapbox://behnam2019.ckqcmbhml1h5321t86aqtp13b-1iklx",
+            "url": "mapbox://behnam2019.ckqcmbhml1h5321t86aqtp13b-1iklx,behnam2019.ckqcmbhml1h5321t86aqtp13b-005ei",
             "type": "vector"
     }},
     "sprite": "mapbox://sprites/behnam2019/cj0gnvmaq00a22srlqwthdt9f/8ckxqkba6ylqcatm6740tyqfi",
