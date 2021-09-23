@@ -5091,47 +5091,76 @@
                     "step",
                     ["zoom"],
                     [
-                        "case",
-                        ["has", "maki_beta"],
+                      "case",
+                      ["has", "maki_beta"],
+                      [
+                        "coalesce",
                         [
-                            "coalesce",
-                            ["image", ["concat", ["get", "maki_beta"], "-11"]],
-                            ["image", ["concat", ["get", "maki"], "-11"]]
+                          "image",
+                          [
+                            "concat",
+                            [
+                              "get",
+                              "maki_beta"
+                            ],
+                            "-11"
+                          ]
                         ],
-                        ["image", ["concat", ["get", "maki"], "-11"]]
+                        [
+                          "image",
+                          [
+                            "concat",
+                            ["get", "maki"],
+                            "-11"
+                          ]
+                        ]
+                      ],
+                      [
+                        "image",
+                        [
+                          "concat",
+                          ["get", "maki"],
+                          "-11"
+                        ]
+                      ]
                     ],
                     15,
                     [
-                        "case",
-                        ["has", "maki_beta"],
+                      "case",
+                      ["has", "maki_beta"],
+                      [
+                        "coalesce",
                         [
-                            "coalesce",
-                            ["image", ["concat", ["get", "maki_beta"], "-15"]],
-                            ["image", ["concat", ["get", "maki"], "-15"]]
+                          "image",
+                          [
+                            "concat",
+                            [
+                              "get",
+                              "maki_beta"
+                            ],
+                            "-15"
+                          ]
                         ],
-                        ["image", ["concat", ["get", "maki"], "-15"]]
+                        [
+                          "image",
+                          [
+                            "concat",
+                            ["get", "maki"],
+                            "-15"
+                          ]
+                        ]
+                      ],
+                      [
+                        "image",
+                        [
+                          "concat",
+                          ["get", "maki"],
+                          "-15"
+                        ]
+                      ]
                     ]
-                ],
-                "text-font": ["DIN Pro Medium", "Arial Unicode MS Regular"],
-                "text-offset": [
-                    "step",
-                    ["zoom"],
-                    [
-                        "step",
-                        ["get", "sizerank"],
-                        ["literal", [0, 0]],
-                        5,
-                        ["literal", [0, 0.75]]
-                    ],
-                    17,
-                    [
-                        "step",
-                        ["get", "sizerank"],
-                        ["literal", [0, 0]],
-                        13,
-                        ["literal", [0, 0.75]]
-                    ]
-                ],
+                  ],
+                  "icon-size": 0.5,
                 "text-anchor": [
                     "step",
                     ["zoom"],
@@ -5160,7 +5189,7 @@
                     "hsl(340, 68%, 100%)",
                     "hsl(35, 19%, 100%)"
                 ],
-                "text-halo-width": 0.5,
+                "text-halo-width": 0.1,
                 "text-halo-blur": 0.5,
                 "text-color": [
                     "step",
@@ -5934,82 +5963,6 @@
             "layout": {"visibility": "none"}
         },
                
-        {
-            "id": "osaka",
-            "type": "fill",
-            "source": "composite2",
-            "source-layer": "Osaka",
-            "layout": {"visibility": "none"},
-            "paint": {
-                "fill-color": [
-                    "match",
-                    ["get", "output"],
-                    ["construction-wagon"],
-                    "hsl(39, 74%, 44%)",
-                    ["road-nonroad"],
-                    "hsl(249, 68%, 49%)",
-                    ["bus"],
-                    "hsl(0, 83%, 57%)",
-                    ["sidewalk-nonsidewalk"],
-                    "hsl(173, 59%, 56%)",
-                    ["X-lane"],
-                    "hsl(0, 87%, 81%)",
-                    ["bike"],
-                    "hsl(111, 70%, 53%)",
-                    ["vegetation-on-road-sw"],
-                    "hsl(128, 88%, 31%)",
-                    ["turn-back-lane"],
-                    "hsl(0, 49%, 27%)",
-                    ["tiny-dash-line"],
-                    "hsl(301, 61%, 48%)",
-                    ["van"],
-                    "hsl(56, 88%, 62%)",
-                    ["others"],
-                    "hsl(0, 52%, 39%)",
-                    ["speed-sign"],
-                    "hsl(0, 80%, 39%)",
-                    ["long-line"],
-                    "hsl(308, 78%, 57%)",
-                    ["traffic-light"],
-                    "hsl(0, 93%, 46%)",
-                    ["specific-area"],
-                    "hsl(85, 58%, 21%)",
-                    ["stop-sign"],
-                    "hsl(0, 89%, 44%)",
-                    ["traffic-lamp"],
-                    "hsl(111, 87%, 25%)",
-                    ["bike-sign"],
-                    "hsl(36, 91%, 48%)",
-                    ["crosswalk"],
-                    "hsl(0, 1%, 97%)",
-                    ["bus-sign"],
-                    "hsl(177, 48%, 38%)",
-                    ["person"],
-                    "hsl(304, 80%, 56%)",
-                    ["turn-straight-left"],
-                    "hsl(304, 81%, 81%)",
-                    "hsla(0, 0%, 0%, 0)"
-                ],
-                "fill-opacity": [
-                    "match",
-                    ["get", "output"],
-                    ["bike"],
-                    0.42,
-                    ["construction-wagon"],
-                    0.64,
-                    ["bus"],
-                    0,
-                    1
-                ],
-                "fill-outline-color": [
-                    "match",
-                    ["get", "output"],
-                    ["person"],
-                    "hsl(0, 85%, 58%)",
-                    "hsla(0, 0%, 0%, 0.93)"
-                ]
-            }
-        },
         {
             "id": "osaka-building",
             "type": "fill-extrusion",
